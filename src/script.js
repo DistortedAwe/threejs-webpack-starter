@@ -7,7 +7,7 @@ import * as dat from 'dat.gui'
 const gui = new dat.GUI()
 
 // Canvas
-const canvas = $('canvas.webgl')
+const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
