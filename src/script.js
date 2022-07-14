@@ -5,7 +5,7 @@ import * as dat from 'dat.gui'
 
 //loading
 const textureLoader = new THREE.TextureLoader()
-const normalTexture = textureLoader.load('static/textures/NormalMap.png')
+const normalTexture = textureLoader.load('../textures/NormalMap.png')
 
 // Debug
 const gui = new dat.GUI()
@@ -25,7 +25,7 @@ const material = new THREE.MeshStandardMaterial()
 material.metalness = 0.7
 material.roughness = 0.4
 material.normalMap = normalTexture
-material.color = new THREE.Color(0x292929)
+material.color = new THREE.Color(0xffffff)
 
 
 // Mesh
@@ -42,12 +42,20 @@ const pointLight2 = new THREE.PointLight(0xff0000, 2)
 // pointLight.position.x = 2
 // pointLight.position.y = 3
 // pointLight.position.z = 4
-pointLight2.position.set(1,1,1)
+pointLight2.position.set(-5,-2,-4)
 pointLight2.intensity == 1
 scene.add(pointLight2)
 
+gui.add(pointLight2.position, 'y').min(-3).max(3).step(0.01)
+gui.add(pointLight2.position, 'x').min(-6).max(6).step(0.01)
+gui.add(pointLight2.position, 'z').min(-3).max(15).step(0.01)
+gui.add(pointLight2, 'intensity').min(0).max(10).step(0.01)
+
+const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1)
+scene.add(pointLightHelper)
+
 /**
- * Sizes
+ * Sizes 
  */
 const sizes = {
     width: window.innerWidth,
