@@ -36,6 +36,7 @@ scene.add(sphere)
 
 const pointLight = new THREE.PointLight(0xffffff, 3)
 pointLight.position.set(2,3,4)
+pointLight.intensity == 10
 scene.add(pointLight)
 
 const pointLight2 = new THREE.PointLight(0xff0000, 0.05)
