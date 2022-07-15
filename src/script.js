@@ -33,9 +33,9 @@ const sphere = new THREE.Mesh(geometry,material)
 scene.add(sphere)
 
 const geometry1 = new THREE.SphereBufferGeometry(.5,64,64)
-geometry1.position.set(-4,3,4)
 
 const sphere1 = new THREE.Mesh(geometry1,material)
+sphere1.position.set(4,3,4)
 scene.add(sphere1)
 // Lights
 
