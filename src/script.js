@@ -25,7 +25,7 @@ const material = new THREE.MeshStandardMaterial()
 material.metalness = 0.7
 material.roughness = 0.4
 material.normalMap = normalTexture
-material.color = new THREE.Color(0xffffff)
+material.color = new THREE.Color(0xb16c20)
 
 
 // Mesh
