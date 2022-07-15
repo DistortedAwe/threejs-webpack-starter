@@ -34,11 +34,11 @@ scene.add(sphere)
 
 // Lights
 
-const pointLight = new THREE.PointLight(0xffffff, 0.7)
+const pointLight = new THREE.PointLight(0xffffff, 3)
 pointLight.position.set(2,3,4)
 scene.add(pointLight)
 
-const pointLight2 = new THREE.PointLight(0xff0000, 0.2)
+const pointLight2 = new THREE.PointLight(0xff0000, 0.05)
 pointLight2.position.set(-2.5,0.9,-3)
 pointLight2.intensity == 1
 scene.add(pointLight2)
@@ -53,7 +53,7 @@ light1.add(pointLight2, 'intensity').min(0).max(10).step(0.01)
 // const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1)
 // scene.add(pointLightHelper)
 
-const pointLight3 = new THREE.PointLight(0x9a41c8, 0.4)
+const pointLight3 = new THREE.PointLight(0x9a41c8, 0.3)
 pointLight3.position.set(0.6,-2.4,-3)
 pointLight3.intensity == 0.5
 scene.add(pointLight3)
